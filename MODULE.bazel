@@ -4,6 +4,8 @@ module(
     compatibility_level = 1,
 )
 
+bazel_dep(name = "platforms", version = "0.0.8")
+
 arm_none_eabi = use_extension("@arm_none_eabi//:extensions.bzl", "arm_none_eabi")
 arm_none_eabi.toolchain(version = "9.2.1")
 use_repo(
